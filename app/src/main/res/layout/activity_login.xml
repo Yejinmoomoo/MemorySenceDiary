@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/sky"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="5"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/idText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="110dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_background"
+            android:drawableStart="@drawable/ic_baseline_person"
+            android:drawableLeft="@drawable/ic_baseline_person"
+            android:hint="아이디"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:shadowColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            android:drawableStart="@drawable/ic_baseline_https"
+            android:drawableLeft="@drawable/ic_baseline_https"
+            android:layout_marginBottom="20sp"
+            android:padding="10dp"
+            android:hint="패스워드"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button_log"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/cca"
+            android:text="로그인"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"
+            android:textSize="27sp"
+            android:onClick="gomypage"/>
+        <Button
+            android:id="@+id/button_sign"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/cca"
+            android:text="회원가입"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            android:layout_marginBottom="20dp"
+            android:onClick="gojoin"/>
+
+        <Button
+            android:id="@+id/mainButton3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cca"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_background"
+            android:text="종료"
+            android:textSize="27sp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

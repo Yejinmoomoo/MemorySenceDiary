@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".CreateMemoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/Widget.AppCompat.Toolbar">
+
+        <androidx.cardview.widget.CardView
+            style="@style/ButtonCardViewStyle" >
+
+            <View
+                android:background="@drawable/ic_arrow_back_24dp"
+                style="@style/ViewStyleInCardView" />
+
+            <Button
+                android:id="@+id/btn_go_before"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                style="@style/ViewStyleInCardView" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="end"
+            style="@style/ButtonCardViewStyle" >
+
+            <View
+                android:background="@drawable/ic_delete_black_24dp"
+                style="@style/ViewStyleInCardView"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                style="@style/ViewStyleInCardView" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="end"
+            style="@style/ButtonCardViewStyle" >
+
+            <View
+                android:background="@drawable/ic_create_black_24dp"
+                style="@style/ViewStyleInCardView" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                style="@style/ViewStyleInCardView" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_memo_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="@string/text_memo_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp" />
+
+            <TextView
+                android:id="@+id/text_memo_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:background="@android:color/white"
+                android:text="@string/text_memo_content"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/image_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:background="@android:color/white"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

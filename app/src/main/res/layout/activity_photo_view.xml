@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        app:popupTheme="@style/Widget.AppCompat.Toolbar">
+
+        <TextView
+            android:id="@+id/page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <androidx.cardview.widget.CardView
+            style="@style/ButtonCardViewStyle" >
+
+            <View
+                android:backgroundTint="@android:color/black"
+                android:background="@drawable/ic_arrow_back_24dp"
+                style="@style/ViewStyleInCardView" />
+
+            <Button
+                android:id="@+id/btn_go_before"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                style="@style/ViewStyleInCardView" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/photo_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" />
+
+</LinearLayout>
